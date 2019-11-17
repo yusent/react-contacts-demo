@@ -1,0 +1,18 @@
+.contact-card {
+  background-color: #eee;
+  width: 344px;
+}
+
+.contact-card img {
+  height: 194px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.contact-card .contact-info {
+  padding: 16px 16px 8px 16px;
+}
+
+.contact-card .contact-info p {
+  margin: 0;
+}

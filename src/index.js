@@ -1,5 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Contact from './Contact';
+import ContactCard from './ContactCard';
+import contactPicture from './placeholder.jpg';
 
-ReactDOM.render(<Contact />, document.getElementById('root'));
+const contact = {
+  name: 'Contact name',
+  picture: contactPicture,
+};
+
+ReactDOM.render(<ContactCard contact={contact} />, document.getElementById('root'));
