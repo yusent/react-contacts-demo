@@ -16,3 +16,18 @@
 .contact-card .contact-info p {
   margin: 0;
 }
+
+.action-button {
+  border: 0;
+  cursor: pointer;
+  height: 24px;
+  margin-right: 8px;
+  padding: 0;
+  width: 24px;
+}
+
+.action-button img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}

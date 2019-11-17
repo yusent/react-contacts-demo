@@ -4,7 +4,8 @@ import ContactCard from './ContactCard';
 import contactPicture from './placeholder.jpg';
 
 const contact = {
-  name: 'Contact name',
+  name: 'Peter Parker',
+  phoneNumber: '(664) 213-2131',
   picture: contactPicture,
 };
 

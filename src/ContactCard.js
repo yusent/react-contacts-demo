@@ -1,5 +1,7 @@
 import React from 'react';
 import './contact-card.css';
+import editIcon from './assets/edit.svg';
+import deleteIcon from './assets/delete.svg';
 
 export default function({ contact }) {
   return (
@@ -10,6 +12,18 @@ export default function({ contact }) {
         <p className="contact-name">
           {contact.name}
         </p>
+
+        <p className="contact-phone">
+          {contact.phoneNumber}
+        </p>
+
+        <button className="action-button">
+          <img src={editIcon} />
+        </button>
+
+        <button className="action-button">
+          <img src={deleteIcon} />
+        </button>
       </div>
     </div>
   );
