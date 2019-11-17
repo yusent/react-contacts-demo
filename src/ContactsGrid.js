@@ -24,14 +24,18 @@ export default function() {
   };
 
   return (
-    <div id="grid">
-      {contacts.map(contact => (
-        <ContactCard
-          key={contact.id}
-          contact={contact}
-          onDelete={() => deleteContact(contact)}
-        />
-      ))}
-    </div>
+    <>
+      <h1>Contacts</h1>
+
+      <div id="grid">
+        {contacts.map(contact => (
+          <ContactCard
+            key={contact.id}
+            contact={contact}
+            onDelete={() => deleteContact(contact)}
+          />
+        ))}
+      </div>
+    </>
   );
 }
