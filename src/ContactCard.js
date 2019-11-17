@@ -5,15 +5,15 @@ import deleteIcon from './assets/delete.svg';
 export default function({ contact }) {
   return (
     <div className="contact-card">
-      <img alt="contact" src={contact.picture} />
+      <img alt="contact" src={contact.avatar} />
 
       <div className="contact-info">
         <p className="contact-name">
           {contact.name}
         </p>
 
-        <p className="contact-phone">
-          {contact.phoneNumber}
+        <p className="contact-email">
+          {contact.email}
         </p>
 
         <button className="action-button">
