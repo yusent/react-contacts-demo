@@ -8,4 +8,7 @@ const contact = {
   picture: contactPicture,
 };
 
-ReactDOM.render(<ContactCard contact={contact} />, document.getElementById('root'));
+ReactDOM.render(
+  <ContactCard contact={contact} />,
+  document.getElementById('root')
+);
