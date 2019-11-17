@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+#grid {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .contact-card {
   background-color: #eee;
   font-family: 'Roboto', sans-serif;
+  margin: 16px;
   width: 344px;
 }
 
