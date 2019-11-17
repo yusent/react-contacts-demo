@@ -18,11 +18,11 @@ export default function({ contact }) {
         </p>
 
         <button className="action-button">
-          <img src={editIcon} />
+          <img alt="edit button" src={editIcon} />
         </button>
 
         <button className="action-button">
-          <img src={deleteIcon} />
+          <img alt="delete button" src={deleteIcon} />
         </button>
       </div>
     </div>
