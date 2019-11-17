@@ -44,9 +44,13 @@ p {
 button {
   border: 0;
   cursor: pointer;
+  padding: 0;
+}
+
+.contact-card button {
+  background: none;
   height: 24px;
   margin-right: 8px;
-  padding: 0;
   width: 24px;
 }
 
@@ -54,4 +58,18 @@ button {
   height: 100%;
   object-fit: contain;
   width: 100%;
+}
+
+#fab {
+  align-items: center;
+  background-color: blue;
+  border-radius: 50%;
+  bottom: 16px;
+  box-shadow: 0 6px 10px 0 #666;
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  position: fixed;
+  right: 16px;
+  width: 56px;
 }
