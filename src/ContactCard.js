@@ -9,7 +9,7 @@ export default function({ contact, onDelete }) {
 
       <div className="contact-info">
         <p className="contact-name">
-          {contact.name}
+          {contact.first_name} {contact.last_name}
         </p>
 
         <p className="contact-email">
