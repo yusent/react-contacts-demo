@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { getAll, remove } from './crud';
 import ContactCard from './ContactCard';
+import ContactForm from './ContactForm';
 
 export default function() {
   const [contacts, setContacts] = useState([]);
+  const [modalVisible, setModalVisible] = useState(false);
 
   useEffect(() => {
     const fetchContacts = async () => {
@@ -23,6 +25,10 @@ export default function() {
     }
   };
 
+  const toggleModal = (visible) => () => {
+    setModalVisible(visible);
+  };
+
   return (
     <>
       <h1>Contacts</h1>
@@ -37,7 +43,7 @@ export default function() {
         ))}
       </div>
 
-      <button id="fab">
+      <button id="fab" onClick={toggleModal(true)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -48,6 +54,8 @@ export default function() {
           <path d="M0 0h24v24H0z" fill="none"/>
         </svg>
       </button>
+
+      <ContactForm onOverlayClick={toggleModal(false)} visible={modalVisible} />
     </>
   );
 }
