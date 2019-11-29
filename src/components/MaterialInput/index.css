@@ -1,0 +1,62 @@
+.group {
+  margin: 45px 0;
+  position: relative;
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: block;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus ~ label {
+  color: #555;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  font-size: 12px;
+  top: -14px;
+}
+
+input:focus ~ .bar:before {
+  width: 100%;
+}
+
+label {
+  font-size: 16px;
+  font-weight: normal;
+  left: 5px;
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+  transition: 300ms ease all;
+}
+
+.bar {
+  background-color: #000;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.bar:before {
+  background-color: #555;
+  bottom: 0px;
+  content: '';
+  height: 2px;
+  left: 0%;
+  position: absolute;
+  transition: 300ms ease all;
+  width: 0;
+}
