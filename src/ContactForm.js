@@ -34,6 +34,10 @@ export default function(props) {
         </div>
 
         <div className="modal-actions">
+          <button onClick={props.onOverlayClick}>
+            cancel
+          </button>
+
           <button>
             accept
           </button>
