@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:500,600,700&display=swap');
 
 h1 {
   color: #888;
@@ -72,4 +73,61 @@ button {
   position: fixed;
   right: 16px;
   width: 56px;
+}
+
+.modal-wrapper {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.overlay {
+  background-color: #0009;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Raleway', sans-serif;
+  height: 70%;
+  position: absolute;
+  width: 70%;
+}
+
+.modal-body {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 24px;
+}
+
+.modal-actions {
+  border-top: 1px solid #ccc;
+  padding: 4px;
+  text-align: right;
+}
+
+.modal-actions button {
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 4px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.display-none {
+  display: none;
 }
