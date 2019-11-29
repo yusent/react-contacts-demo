@@ -4,7 +4,13 @@ import './index.css';
 export default function(props) {
   return (
     <div className="group">
-      <input type="text" required />
+      <input
+        onChange={event => props.onChange(event.target.value)}
+        required
+        type="text"
+        value={props.value}
+      />
+
       <span className="bar" />
       <label>{props.label}</label>
     </div>
