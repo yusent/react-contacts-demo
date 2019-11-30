@@ -2,12 +2,14 @@ import React from 'react';
 import './index.css';
 
 export default function(props) {
+  const type = props.type || 'text';
+
   return (
     <div className="group">
       <input
         onChange={event => props.onChange(event.target.value)}
         required
-        type="text"
+        type={type}
         value={props.value}
       />
 
