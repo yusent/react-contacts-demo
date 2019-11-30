@@ -19,10 +19,12 @@ input:focus {
   outline: none;
 }
 
+input[type="file"]:valid ~ label,
 input:focus ~ label {
   color: #555;
 }
 
+input[type="file"] ~ label,
 input:focus ~ label,
 input:valid ~ label {
   font-size: 12px;
