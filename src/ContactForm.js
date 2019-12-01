@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { create } from './crud';
 import MaterialInput from './components/MaterialInput';
 
 export default function(props) {
@@ -7,6 +8,27 @@ export default function(props) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
+  const [avatar, setAvatar] = useState('');
+
+  const createContact = async () => {
+    const result = await create({
+      avatar,
+      email,
+      first_name: firstName,
+      last_name: lastName,
+    });
+
+    if (result.ok) {
+      props.onContactAdded({
+        avatar,
+        email,
+        first_name: firstName,
+        last_name: lastName,
+      });
+
+      props.onOverlayClick();
+    }
+  };
 
   return (
     <div className={className}>
@@ -31,6 +53,13 @@ export default function(props) {
             onChange={setEmail}
             value={email}
           />
+
+          <MaterialInput
+            label="Avatar"
+            onChange={setAvatar}
+            type="file"
+            value={avatar}
+          />
         </div>
 
         <div className="modal-actions">
@@ -38,7 +67,7 @@ export default function(props) {
             cancel
           </button>
 
-          <button>
+          <button onClick={createContact}>
             accept
           </button>
         </div>

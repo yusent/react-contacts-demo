@@ -1,20 +1,26 @@
 import React from 'react';
 import './index.css';
 
-export default function(props) {
-  const type = props.type || 'text';
+const textExtractValue = event => event.target.value;
+const fileExtractValue = event => URL.createObjectURL(event.target.files[0]);
+
+export default function({ label, onChange, type = 'text', value }) {
+  const extractValue = type === 'file' ? fileExtractValue : textExtractValue;
+
+  // Passing value prop to input with type 'file' throws an InvalidStateError.
+  const extra = type === 'file' ? {} : { value };
 
   return (
     <div className="group">
       <input
-        onChange={event => props.onChange(event.target.value)}
+        onChange={event => onChange(extractValue(event))}
         required
         type={type}
-        value={props.value}
+        {...extra}
       />
 
       <span className="bar" />
-      <label>{props.label}</label>
+      <label>{label}</label>
     </div>
   );
 }

@@ -17,6 +17,8 @@ export default function() {
     fetchContacts();
   }, []);
 
+  const addContact = (contact) => setContacts([...contacts, contact]);
+
   const deleteContact = async (contact) => {
     const result = await remove(contact.id);
 
@@ -55,7 +57,11 @@ export default function() {
         </svg>
       </button>
 
-      <ContactForm onOverlayClick={toggleModal(false)} visible={modalVisible} />
+      <ContactForm
+        onContactAdded={addContact}
+        onOverlayClick={toggleModal(false)}
+        visible={modalVisible}
+      />
     </>
   );
 }
